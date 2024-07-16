@@ -6,12 +6,24 @@ x_values = [1.5, 2.0, 1.8, 2.2, 1.7, 1.9, 2.1, 2.3]
 y_values = [250, 320, 280, 350, 270, 300, 330, 380]
 
 #Defining a function to find the Cost function for a given value of w and b:
+# def cost_function(w,b):
+#     cost_function = 0
+#     for i in range(len(x_values)):
+#         cost_function += ((w*x_values[i]+b)-y_values[i])**2
+#     cost_function = (1/(2*len(x_values)))*cost_function
+#     return cost_function
+
+
 def cost_function(w,b):
-    cost_function = 0
+    d=[]
+    v=[]
+    mv=0
     for i in range(len(x_values)):
-        cost_function += ((w*x_values[i]+b)-y_values[i])**2
-    cost_function = (1/(2*len(x_values)))*cost_function
-    return cost_function
+        d+=((w*x_values[i]+b)-y_values[i])
+    for value in d:
+        v+=((d-mean(d))**2)/len(d)
+    mv+=mean(v)     
+
 
 #Finding the cost function for a random value of w = 1 and b = 1
 print(f'The cost function for w=1 and b=1 is {cost_function(1,1)}')
@@ -53,8 +65,4 @@ def gradient_descent(w,b,alpha,iterations):
 
 #Try this with different values of alpha and iterations to find perfect fit
 #you always wont get correct answer if you dont select optimal alpha and iteration values
-gradient_descent(1, 1, 0.0001, 10000)
-
-
-
-
+gradient_descent(1, 1, 0.1,10000)
