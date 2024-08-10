@@ -29,3 +29,10 @@ In this document, I've learned the basics of logistic regression, its purpose, a
 
 - Cost Function for Logistic Regression  
   The cost function (or loss function) for logistic regression is derived from the negative log-likelihood of the logistic regression model. It penalizes the model based on the difference between predicted probabilities and actual labels:
+
+### Neural Networks  
+Neural networks are just another way to do supervised machine learning. They can be used to do both regression and classification. They are preferred over normal logistic and linear regression because they can learn how to do feature engineering by themselves. In classification, they can classify more than one classes.
+- Learnt how neural networks make predictions (forward propagation).
+- How to train a neural network using back propagation.
+- Learnt about different activations functions like sigmoid, tanh and relu including their use cases.
+- Learnt how to appropriately choose the size of the neural network.
