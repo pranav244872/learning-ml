@@ -36,3 +36,12 @@ Neural networks are just another way to do supervised machine learning. They can
 - How to train a neural network using back propagation.
 - Learnt about different activations functions like sigmoid, tanh and relu including their use cases.
 - Learnt how to appropriately choose the size of the neural network.
+
+### Project -1 : Sign Language Training
+I used a kaggle sign lanugage dataset which had 26 alphabets as 28x28 pixel intensities in sign language. With 34k data samples. Each sample had 784 features. I designed a neural network to train it on the sample dataset and achieved an accuracy of 80%.  
+Things I learn’t from this project:
+- The size of batch while training matters a lot. Using a small batch with too many features may often lead to overfitting of data.
+- The number of layers in a neural network and nodes in each layers matter. If we have too many nodes, the data may overfit for a batch and perform poorly for other batches.
+- The initialization of weights and biases should optimally be from np.random.randn. If, we initalize it as static number, we may fail to get convergence.
+- I am still currently using all of the 34k samples to achieve an accuracy of 80%. I may optimally try to make it more efficient or achieve the same accuracy with a less number of samples.
+- I can do this by experimenting with the number of layers, nodes and activation functions. 
