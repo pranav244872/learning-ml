@@ -45,3 +45,40 @@ Things I learn’t from this project:
 - The initialization of weights and biases should optimally be from np.random.randn. If, we initalize it as static number, we may fail to get convergence.
 - I am still currently using all of the 34k samples to achieve an accuracy of 80%. I may optimally try to make it more efficient or achieve the same accuracy with a less number of samples.
 - I can do this by experimenting with the number of layers, nodes and activation functions. 
+
+### Convolutional Neural Networks (CNNs)
+
+ **Key Concepts**
+- **Convolutions**:
+  - **Definition**: Convolutions are mathematical operations used to apply a filter to an input image, extracting features such as edges, textures, and patterns.
+  - **Purpose**: They help in detecting patterns in the data, which is crucial for tasks such as image classification and object detection.
+- **Pooling**:
+  - **Definition**: Pooling is a technique used to downsample feature maps, reducing their spatial dimensions while retaining the most important information.
+  - **Types**: 
+    - **Max Pooling**: Takes the maximum value from each pooling window.
+    - **Average Pooling**: Computes the average value within the pooling window.  
+    
+**Hyperparameters**
+
+- **Importance**: Proper declaration and tuning of hyperparameters are crucial for building effective models. Hyperparameters include learning rates, batch sizes, number of epochs, and network architecture details.
+- **Impact**: They significantly influence the model's performance and training efficiency.
+
+**Normalization**
+
+- **Batch Normalization**:
+  - **Definition**: Batch normalization is a technique to normalize the inputs of each layer to improve training stability and speed up convergence.
+  - **Purpose**: Helps in reducing internal covariate shift, leading to more stable and faster training.
+
+**Interpretation of Loss and Validation Curves**
+- **Loss Curves**:
+  - **Training Loss**: Shows how well the model is learning from the training data. A decreasing training loss generally indicates that the model is learning.
+  - **Validation Loss**: Represents the model’s performance on unseen data. It helps in assessing if the model is overfitting or underfitting.
+  
+- **Curves Analysis**:
+  - **Overfitting**: If the training loss continues to decrease while the validation loss starts increasing, the model may be overfitting.
+  - **Underfitting**: If both training and validation losses are high, the model might be underfitting and may require a more complex architecture or longer training.
+
+**Summary**
+- Understanding convolutions and pooling operations is fundamental in CNNs.
+- Properly tuning hyperparameters and using techniques like batch normalization are key to building effective neural networks.
+- Interpreting loss and validation curves provides insights into the model’s learning process and helps in improving performance.
